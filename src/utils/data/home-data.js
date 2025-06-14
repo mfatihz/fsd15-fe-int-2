@@ -1,24 +1,24 @@
-import { heroDB, continueDB, topDB, trendingDB, newDB } from "./db-functions"
+import { heroData, continueData, topData, trendingData, newData } from "./db-functions"
 
-export const movieHero = heroDB
+export const movieHero = heroData
 
 export const movieGalleries = [
     {
         title: "Melanjutkan Tonton Film",
         type: "continue",
-        movies: continueDB,
+        movies: continueData,
     },
     {
         title: "Top Rating Film dan Series Hari ini",
-        movies: topDB,
+        movies: topData,
     },
     {
         title: "Film Trending",
-        movies: trendingDB,
+        movies: trendingData,
     },
     {
         title: "Rilis Baru",
-        movies: newDB,
+        movies: newData,
     },
 ]
 
@@ -26,6 +26,6 @@ export const myList = [
     {
         title: "Daftar Saya",
         type: "listed",
-        movies: topDB,
+        movies: topData,
     },
 ]

@@ -3,7 +3,8 @@ import HeroTitle from "../atoms/hero-title"
 import HeroSummary from "../atoms/hero-summary"
 import HeroContainer from "../atoms/hero-container"
 
-function Hero({ movie, padding }) {
+function Hero({ movies, padding }) {
+    let movie = movies[0]
     return (
         <HeroContainer imageUrl={movie?.images.hero} padding={padding}>
             <div className="w-full self-end flex flex-col gap-2 md:gap-4">

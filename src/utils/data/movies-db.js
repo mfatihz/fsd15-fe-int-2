@@ -1,29 +1,27 @@
 const genres = (indexes) => indexes.map(i => ['action','drama','fantasy'][i])
 
-export const db = [
-    /* 
-    {//0
-        id: Math.random()*100,
-        title: "",
-        type: ['movie','series'][0],
-        genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
-        contentRating: "18+",
-        userRating: 4.7,
-        images: {
-            hero:'',
-            portrait:'/images/poster-portrait/aaa.svg',
-            landscape:'/images/poster-landscape/aaa.svg',
-        },
-        duration:'',
-        episodes: null,
-        myList: false,
-        summary: 'Belum ada ringkasan',
+const movieTemplate = {//0
+    id: 0,
+    title: "",
+    type: ['movie','series'][0],
+    genres:['series','action','Sci-fi','drama','romance'],
+    badges: ['new','top'],
+    contentRating: "18+",
+    userRating: 4.7,
+    images: {
+        hero:'',
+        portrait:'/images/poster-portrait/aaa.svg',
+        landscape:'/images/poster-landscape/aaa.svg',
     },
-    */
+    duration:'',
+    episodes: null,
+    myList: false,
+    summary: 'Belum ada ringkasan',
+}
 
-    {//0
-        id: Math.random()*100,
+export const moviesDB = [
+    {
+        id: 0,
         title: "My Hero Academia",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -40,8 +38,8 @@ export const db = [
         myList: false,
         summary: 'Belum ada ringkasan',
     },
-    {//1
-        id: Math.random()*100,
+    {
+        id: 1,
         title: "Alice in Borderland",
         type: ['movie','series'][1],
         genres:genres([1,2]),
@@ -59,7 +57,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//2
-        id: Math.random()*100,
+        id: 2,
         title: "All of Us are Dead",
         type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -77,7 +75,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//3
-        id: Math.random()*100,
+        id: 3,
         title: "Avatar",
         type: ['movie','series'][0],
         genres:genres([1,2]),
@@ -95,7 +93,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//4
-        id: Math.random()*100,
+        id: 4,
         title: "Batman",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -113,7 +111,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//5
-        id: Math.random()*100,
+        id: 5,
         title: "Baymax",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -131,7 +129,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//6
-        id: Math.random()*100,
+        id: 6,
         title: "Big Hero 6",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -149,7 +147,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//7
-        id: Math.random()*100,
+        id: 7,
         title: "Blue Lock",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -167,7 +165,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//8
-        id: Math.random()*100,
+        id: 8,
         title: "Dilan",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -185,7 +183,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//9
-        id: Math.random()*100,
+        id: 9,
         title: "Don't Look Up",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -203,7 +201,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//10
-        id: Math.random()*100,
+        id: 10,
         title: "Duty after School",
         type: ['movie','series'][0],
         genres: ['action','drama','fantasy'],
@@ -223,7 +221,7 @@ export const db = [
             termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.`,
     },
     {//11
-        id: Math.random()*100,
+        id: 11,
         title: "Fast X",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -241,7 +239,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//12
-        id: Math.random()*100,
+        id: 12,
         title: "Guardians of the Galaxy",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -259,7 +257,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//13
-        id: Math.random()*100,
+        id: 13,
         title: "Happiness",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -277,7 +275,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//14
-        id: Math.random()*100,
+        id: 14,
         title: "Jurassic World",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -295,7 +293,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//15
-        id: Math.random()*100,
+        id: 15,
         title: "Megan",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -313,7 +311,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//16
-        id: Math.random()*100,
+        id: 16,
         title: "The Little Mermaid",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -331,7 +329,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//17
-        id: Math.random()*100,
+        id: 17,
         title: "Missing",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -349,7 +347,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//18
-        id: Math.random()*100,
+        id: 18,
         title: "A Man Called Otto",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -367,7 +365,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//19
-        id: Math.random()*100,
+        id: 19,
         title: "Quantumania",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -385,7 +383,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//20
-        id: Math.random()*100,
+        id: 20,
         title: "Rio",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -403,7 +401,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//21
-        id: Math.random()*100,
+        id: 21,
         title: "Shazam",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -421,7 +419,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//22
-        id: Math.random()*100,
+        id: 22,
         title: "Sonic 2",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -439,7 +437,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//23
-        id: Math.random()*100,
+        id: 23,
         title: "Spiderman",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -457,7 +455,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//24
-        id: Math.random()*100,
+        id: 24,
         title: "The Little Stuart",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
@@ -475,7 +473,7 @@ export const db = [
         summary: 'Belum ada ringkasan',
     },
     {//25
-        id: Math.random()*100,
+        id: 25,
         title:'Suzume',
         type:['movie','series'][0],
         genres:genres([1,2]),
@@ -493,7 +491,7 @@ export const db = [
         summary:'Ringkasan belum tersedia',
     },
     {//26
-        id: Math.random()*100,
+        id: 26,
         title: "The Tomorrow War",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],

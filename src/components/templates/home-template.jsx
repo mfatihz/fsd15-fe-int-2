@@ -18,7 +18,7 @@ function HomeTemplate({ header, footer, hero, galleries }) {
 
             { hero &&
                 <Hero
-                    movie={hero}
+                    movies={hero}
                     padding="
                         px-4 sm:px-10 md:px-20
                         pb-4 sm:pb-10 md:pb-20

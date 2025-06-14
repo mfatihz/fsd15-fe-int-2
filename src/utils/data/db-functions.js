@@ -1,22 +1,28 @@
-import { db } from './movies-db'
+import { moviesDB } from './movies-db'
 
-const movies = (indexes) => indexes.map(i => db[i])
+const getMovies = (indexes) => indexes.map(i => moviesDB.find(movie => movie.id === i)).filter(Boolean);
 
-export const heroDB = db[10]
+const heroDB = [10];
+export const heroData = getMovies(heroDB);
 
-export const continueDB = movies([
+
+const continueDB = [
     25, 2, 6, 18, 26, 16,
     1, 11, 22, 12, 3, 17,
-])
+];
+export const continueData = getMovies(continueDB);
 
-export const topDB = movies([2, 25, 24, 26])
+const topDB = [2, 25, 24, 26];
+export const topData = topDB.map(id => moviesDB.find(movie => movie.id === id)).filter(Boolean);
 
-export const trendingDB = movies([
+const trendingDB = [
     0, 1, 2, 3, 4, 5,
     6, 7, 8, 9, 10, 11,
-])
+];
+export const trendingData = getMovies(trendingDB);
 
-export const newDB = movies([
+const newDB = [
     12, 13, 14, 15, 16, 17,
     18, 19, 20, 21, 22, 23,
-])
+];
+export const newData = getMovies(newDB);
