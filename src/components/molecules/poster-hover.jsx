@@ -5,7 +5,7 @@ import ChevronDownButton from '../atoms/chevron-down-button'
 import PosterContentRating from '../atoms/poster-content-rating'
 import PosterLabel from '../atoms/poster-label'
 
-function PosterHover({movie}) {
+function PosterHover({ movie, onClick, checkedList }) {
   return (
     <div className='  
       w-[245px] sm:w-[347px] md:w-[408px]
@@ -19,7 +19,11 @@ function PosterHover({movie}) {
       <div className='p-4 sm:p-8 flex flex-col gap-3 sm:gap-5 text-white'>
         <div className='flex gap-3 sm:gap-4'>
           <PlayButton />
-          <CheckButton isChecked={movie.myList}/>
+          <CheckButton
+            isChecked={checkedList.has(movie.id)}
+            onClick={onClick}
+            movieId={movie.id}
+          />
           <ChevronDownButton className="ml-auto"/>
         </div>
         <div className='flex gap-3 sm:gap-4 text-xs sm:text-sm content-center items-center'>

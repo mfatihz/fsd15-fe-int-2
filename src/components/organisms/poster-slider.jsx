@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import NoContent from '../atoms/no-content';
 import { getDeviceType } from '../../utils/get-device-type';
 
-const PosterSlider = ({ movies, galleryType, alt, className}) => {
+const PosterSlider = ({ movies, galleryType, onClick, checkedList, alt, className}) => {
   const scrollContainerRef = useRef(null);
   const itemRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -157,7 +157,7 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
       className="inline-block flex-shrink-0"
       ref={index === 0 ? itemRef : null}
     >
-      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} xBoundary={xBoundary}/>
+      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} xBoundary={xBoundary} onClick={onClick} checkedList={checkedList}/>
     </li>
   ));
 

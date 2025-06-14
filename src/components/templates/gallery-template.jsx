@@ -1,8 +1,25 @@
 import clsx from 'clsx'
 import Gallery from "../organisms/gallery"
 import NoContent from "../atoms/no-content"
+import { useState } from 'react';
 
 function GalleryTemplate({ galleries, padding }) {
+    const [favoriteItems, setFavoriteItems] = useState(new Set());
+
+    function handleClick(value) {
+        setFavoriteItems(()=>
+            {
+                if(favoriteItems.has(value)){
+                    favoriteItems.delete(value)
+                } else {
+                    favoriteItems.add(value)
+                }
+                return new Set(favoriteItems)
+            }
+        )
+        console.log(favoriteItems)
+    }
+
     const baseStyle = `
         flex-1
         flex flex-col
@@ -22,6 +39,8 @@ function GalleryTemplate({ galleries, padding }) {
                                 title={gallery.title}
                                 movies={gallery.movies}
                                 galleryType={gallery.type}
+                                onClick={handleClick}
+                                checkedList={favoriteItems}
                             />
                         </div>
                     )
