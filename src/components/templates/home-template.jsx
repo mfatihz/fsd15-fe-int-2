@@ -38,7 +38,8 @@ function HomeTemplate({ header, footer, hero, galleries }) {
                     px-4 sm:px-10 md:px-20
                     py-4 sm:py-10 md:py-20
                     overflow-x-hidden
-                    flex flex-col w-full
+                    flex flex-col
+                    w-full
                 "
                 //bg-[#181A1C]
             >

@@ -34,6 +34,16 @@ body {
   min-height: 100vh;
 }
 
+body {
+  margin: 0;
+  container-type: inline-size;
+}
+
+.full-width {
+  width: 100vw; /* fallback for older browsers */
+  width: 100cqw;
+}
+
 /* CSS tambahan untuk memperhalus scrolling */
 /* Hide scrollbar */
 .scrollbar-hide {
