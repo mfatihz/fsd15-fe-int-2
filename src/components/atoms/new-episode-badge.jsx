@@ -7,6 +7,7 @@ const NewEpisodeBadge = ({className=''}) => {
         px-1 sm:px-2 py-1
         rounded-md
         bg-[#2196F3]
+        shadow-md
     `
 
     return (

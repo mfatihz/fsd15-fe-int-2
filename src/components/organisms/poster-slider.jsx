@@ -4,6 +4,7 @@ import ScrollLeftButton from "../atoms/scroll-left-button";
 import Poster from "./poster";
 import clsx from 'clsx'
 import NoContent from '../atoms/no-content';
+import { getDeviceType } from '../../utils/get-device-type';
 
 const PosterSlider = ({ movies, galleryType, alt, className}) => {
   const scrollContainerRef = useRef(null);
@@ -15,11 +16,23 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  //pemeriksaan device type
+  const [isDesktopTypeDevice, setIsDesktopTypeDevice] = useState(true);
 
   // Check for mobile and content overflow
   useEffect(() => {
+    const checkDeviceType = () => {
+      setIsDesktopTypeDevice(getDeviceType() === 'desktop');
+    };
+
+    checkDeviceType();
+    window.addEventListener('resize', checkDeviceType)
+    
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 640);
+      setIsMobile(
+        // berdasarkan ukuran layar dan pemeriksaan type devices secara sederhana
+        (window.innerWidth < 640) && (!isDesktopTypeDevice)
+      );
     };
 
     const checkContentOverflow = () => {
@@ -33,16 +46,19 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
       }
     };
 
+    checkDeviceType();
     checkIfMobile();
     checkContentOverflow();
-
+    
     const resizeObserver = new ResizeObserver(checkContentOverflow);
     if (scrollContainerRef.current) {
       resizeObserver.observe(scrollContainerRef.current);
     }
 
+    window.addEventListener('resize', getDeviceType);
     window.addEventListener('resize', checkIfMobile);
     window.addEventListener('resize', checkContentOverflow);
+    
 
     return () => {
       resizeObserver.disconnect();
@@ -55,7 +71,6 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
   }, [movies.length]);
 
   const handleTouchStart = (e) => {
-    if (!isMobile) return;
     const touch = e.touches[0];
     setStartX(touch.pageX);
     setScrollLeft(scrollContainerRef.current.scrollLeft);
@@ -63,11 +78,12 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
   };
 
   const handleTouchMove = (e) => {
-    if (!isMobile || !isDragging || !scrollContainerRef.current) return;
+    if (!isDragging || !scrollContainerRef.current) return;
     const touch = e.touches[0];
     const x = touch.pageX;
     const walk = (x - startX) * 2;
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    e.preventDefault();
   };
 
   const handleTouchEnd = () => {
@@ -167,7 +183,8 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
           <NoContent>{ alt }</NoContent>
         }
       </div>
-      {!isMobile && showScrollButtons && (
+
+      { !isMobile && showScrollButtons && (
         <>
           <div className="absolute z-20 bottom-1/2 translate-y-1/2 left-0 -translate-x-1/2 transition-opacity duration-300">
             <ScrollLeftButton 

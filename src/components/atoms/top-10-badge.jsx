@@ -8,6 +8,7 @@ const Top10Badge = ({className=''}) => {
         h-10 sm:h-12
         rounded-none rounded-tr-md rounded-bl-md
         bg-[#f32121]
+        shadow-md
     `
 
     return (
