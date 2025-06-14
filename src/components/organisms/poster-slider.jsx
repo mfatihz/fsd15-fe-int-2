@@ -118,12 +118,12 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
 
   const posterContainer = useRef(null)
   
-  const [paddingX, setPaddingLR] = useState({left:0, right:0});
+  const [xBoundary, setXBoundary] = useState({left:0, right:0});
 
   useEffect(() => {
     const updatePosition = () => {
       if (posterContainer.current) {
-        setPaddingLR({
+        setXBoundary({
           left: posterContainer.current.getBoundingClientRect().left,
           right: posterContainer.current.getBoundingClientRect().right
         });
@@ -141,9 +141,7 @@ const PosterSlider = ({ movies, galleryType, alt, className}) => {
       className="inline-block flex-shrink-0"
       ref={index === 0 ? itemRef : null}
     >
-      {
-    console.log(paddingX)}
-      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} padding={paddingX}/>
+      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} xBoundary={xBoundary}/>
     </li>
   ));
 

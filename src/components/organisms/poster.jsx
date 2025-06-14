@@ -39,26 +39,39 @@ function Poster({
   movie,
   galleryType,
   isMobile=false,
-  padding
+  xBoundary
 }) {
   const [isHovered, setIsHovered] = useState(false)
   const posterRef = useRef(null)
-  
+
   // Fungsi untuk menentukan posisi hover
   const getHoverPosition = () => {
     if (!posterRef.current) return {}
     
     const rect = posterRef.current.getBoundingClientRect()
     const viewportWidth = window.innerWidth
-    const hoverWidth = rect.width //lebar PosterHover //const hoverWidth = 408
+console.log(xBoundary.right, viewportWidth)
+    const rectWidth = rect.width
+    const hoverWidth = 408 //TODO: sementara pakai maks
+    const difWidth = (hoverWidth - rectWidth) / 2
     
     // Jika poster terlalu dekat ke sisi kanan
-    if (rect.right + hoverWidth / 2 > viewportWidth) {
-      return { right: '0', transform: 'translateX(0) translateY(-50%)' }
+    // if (rect.right + hoverWidth / 2 > viewportWidth) {
+    //   return { right: '0', transform: 'translateX(0) translateY(-50%)' }
+    // }
+    if (rect.right + difWidth > xBoundary.right) {
+      const offset = (rect.right - xBoundary.right)
+       return { right: `${offset}px`, transform: 'translateX(0) translateY(-50%)' }
     }
     // Jika poster terlalu dekat ke sisi kiri
-    else if (rect.left - hoverWidth / 2 < 0) {
-      return { left: '0', transform: 'translateX(0) translateY(-50%)' }
+    // else if (rect.left - hoverWidth / 2 < 0) {
+    //   return { left: '0', transform: 'translateX(0) translateY(-50%)' }
+    // }
+    else if (rect.left - difWidth < xBoundary.left) {
+      // tidak perlu (xBoundary.left - rect.left)
+      // biar tidak terlalu nutup card setelahnya
+      const offset = 0
+      return { left: `${offset}px`, transform: 'translateX(0) translateY(-50%)' }
     }
     // Posisi normal (tengah)
     return { left: '50%', transform: 'translateX(-50%) translateY(-50%)' }
