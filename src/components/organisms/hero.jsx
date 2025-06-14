@@ -3,9 +3,9 @@ import HeroTitle from "../atoms/hero-title"
 import HeroSummary from "../atoms/hero-summary"
 import HeroContainer from "../atoms/hero-container"
 
-function Hero({ movie, className }) {
+function Hero({ movie, padding }) {
     return (
-        <HeroContainer imageUrl={movie?.images.hero} className={className}>
+        <HeroContainer imageUrl={movie?.images.hero} padding={padding}>
             <div className="w-full self-end flex flex-col gap-2 md:gap-4">
                 <HeroTitle>{ movie?.title }</HeroTitle>
                 <HeroSummary>{ movie?.summary }</HeroSummary>

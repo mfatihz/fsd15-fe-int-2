@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-function HeroContainer({ imageUrl, children, className='' }) {
+function HeroContainer({ imageUrl, children, padding='' }) {
     const baseStyle=`
         flex
         w-screen box-border
@@ -10,7 +10,7 @@ function HeroContainer({ imageUrl, children, className='' }) {
     
     return (
         <div
-            className={clsx(baseStyle, className)}
+            className={clsx(baseStyle, padding)}
             
             style={{
                  backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${imageUrl})`

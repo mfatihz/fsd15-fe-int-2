@@ -1,11 +1,15 @@
+import clsx from 'clsx'
 import { Link } from "react-router"
 import ChillLogo from "../atoms/chill-logo"
 import NavigationalLinks from "../molecules/navigational-links"
 import SettingMenu from "./setting-menu"
 
-function HomeHeader({ navData, menuData }) {
+function HomeHeader({ navData, menuData, padding}) {
+  const baseStyle = "w-full flex gap-4 sm:gap-8 items-center"
   return (
-    <header className="w-full flex gap-4 sm:gap-8 items-center">
+    <header className={clsx(baseStyle, padding)}
+    >
+      
       <Link to="/">
         <ChillLogo />
       </Link>

@@ -1,30 +1,25 @@
-import Gallery from "../organisms/gallery"
 import Header from "../organisms/home-header"
 import Hero from "../organisms/hero"
 import Footer from "../organisms/home-footer"
-import NoContent from "../atoms/no-content"
+import GalleryTemplate from "./gallery-template"
 
 function HomeTemplate({ header, footer, hero, galleries }) {
     return (
         <div className="min-h-screen flex flex-col">
-            <header 
-                id="top"
-                className="
+            <Header
+                navData={header.navData}
+                menuData={header.menuData}
+                padding="
                     px-4 sm:px-10 md:px-20
                     py-2 sm:py-4 md:py-6
-                "
-                // bg-[#0f0f1a]
-            >
-                <Header
-                    navData={header.navData}
-                    menuData={header.menuData}
-                />
-            </header>
+                "// bg-[#0f0f1a]
+                id="top"
+            />
 
             { hero &&
                 <Hero
                     movie={hero}
-                    className="
+                    padding="
                         px-4 sm:px-10 md:px-20
                         pb-4 sm:pb-10 md:pb-20
                     "
@@ -32,32 +27,13 @@ function HomeTemplate({ header, footer, hero, galleries }) {
                 />
             }
 
-            <main
-                className="
-                    flex-1
+            <GalleryTemplate
+                galleries={galleries}
+                padding="
                     px-4 sm:px-10 md:px-20
                     py-4 sm:py-10 md:py-20
-                    overflow-x-hidden
-                    flex flex-col
-                    w-full
                 "
-                //bg-[#181A1C]
-            >
-                { galleries?.length > 0
-                    ? galleries?.map(
-                        (gallery, index) => (
-                            <div key={index} className="w-full overflow-visible">
-                                <Gallery
-                                    title={gallery.title}
-                                    movies={gallery.movies}
-                                    galleryType={gallery.type}
-                                />
-                            </div>
-                        )
-                    )
-                    : <NoContent color="text-yellow-500">Belum ada isi</NoContent>
-                }
-            </main>
+            />
             
             <Footer
                 genreData={footer.genreData}
