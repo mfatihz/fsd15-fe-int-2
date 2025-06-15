@@ -61,6 +61,7 @@ const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler,
     
     return () => {
       resizeObserver.disconnect();
+      window.removeEventListener('resize', getDeviceType);
       window.removeEventListener('resize', checkIfMobile);
       window.removeEventListener('resize', checkContentOverflow);
       if (animationFrameRef.current) {
