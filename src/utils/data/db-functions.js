@@ -2,10 +2,6 @@ import { moviesDB } from './movies-db'
 
 export const getMovies = (indexes) => indexes.map(i => moviesDB.find(movie => movie.id === i)).filter(Boolean);
 
-
-
-
-
 const heroDB = [10];
 export const heroData = getMovies(heroDB);
 

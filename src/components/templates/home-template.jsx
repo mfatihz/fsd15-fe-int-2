@@ -3,7 +3,7 @@ import Hero from "../organisms/hero"
 import Footer from "../organisms/home-footer"
 import GalleryTemplate from "./gallery-template"
 
-function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, isInMyListHandler }) {
+function HomeTemplate({ header, footer, hero, galleries, idToggleHandler, isInMyListHandler }) {
     return (
         <div className="min-h-screen flex flex-col">
             <Header
@@ -12,7 +12,7 @@ function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, is
                 padding="
                     px-4 sm:px-10 md:px-20
                     py-2 sm:py-4 md:py-6
-                "// bg-[#0f0f1a]
+                "
                 id="top"
             />
 
@@ -23,7 +23,6 @@ function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, is
                         px-4 sm:px-10 md:px-20
                         pb-4 sm:pb-10 md:pb-20
                     "
-                    // bg-[#0f0f1a]
                 />
             }
 
@@ -33,7 +32,7 @@ function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, is
                     px-4 sm:px-10 md:px-20
                     py-4 sm:py-10 md:py-20
                 "
-                mylistToggleHandler={mylistToggleHandler}
+                idToggleHandler={idToggleHandler}
                 isInMyListHandler={isInMyListHandler}
             />
             
@@ -44,7 +43,6 @@ function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, is
                     px-4 sm:px-10 md:px-20
                     py-10 md:py-20
                 "
-                //bg-[#181A1C]
             />
         </div>
     )

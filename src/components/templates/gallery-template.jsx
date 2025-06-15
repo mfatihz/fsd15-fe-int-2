@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import Gallery from "../organisms/gallery"
 import NoContent from "../atoms/no-content"
 
-function GalleryTemplate({ galleries, padding, mylistToggleHandler, isInMyListHandler }) {
+function GalleryTemplate({ galleries, padding, idToggleHandler, isInMyListHandler }) {
     const baseStyle = `
         flex-1
         flex flex-col
@@ -22,7 +22,7 @@ function GalleryTemplate({ galleries, padding, mylistToggleHandler, isInMyListHa
                                 title={gallery.title}
                                 movies={gallery.movies}
                                 galleryType={gallery.type}
-                                mylistToggleHandler={mylistToggleHandler}
+                                idToggleHandler={idToggleHandler}
                                 isInMyListHandler={isInMyListHandler}
                                 isWrapped={gallery.isWrapped}
                             />

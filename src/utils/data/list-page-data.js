@@ -1,9 +1,9 @@
-import { listData } from "./db-functions"
+import { getMovies } from "./db-functions"
 
-export const myList = (movies) => [
+export const myList = (ids) => [
     {
         title: "Daftar Saya",
-        movies: movies,//listData,
+        movies: getMovies(Array.from(ids)),
         isWrapped: true,
     },
 ]

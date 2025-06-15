@@ -16,7 +16,7 @@ function Home() {
   const hero = movieHero
   const galleries = movieGalleries
 
-  const { toggleId: mylistToggleHandler, hasId: isInMyListHandler } = useLocalStorage('my-lists', new Set());
+  const { toggleId: idToggleHandler, hasId: isInMyListHandler } = useLocalStorage('my-lists', new Set());
 
   /* 
   useEffect(() => {
@@ -31,7 +31,7 @@ function Home() {
       footer={footer}
       hero={hero}
       galleries={galleries}
-      mylistToggleHandler={mylistToggleHandler}
+      idToggleHandler={idToggleHandler}
       isInMyListHandler={isInMyListHandler}
     />
   )
