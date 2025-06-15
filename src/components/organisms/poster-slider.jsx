@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import NoContent from '../atoms/no-content';
 import { getDeviceType } from '../../utils/get-device-type';
 
-const PosterSlider = ({ movies, galleryType, onClick, checkedList, alt, className}) => {
+const PosterSlider = ({ movies, galleryType, onClick, idChecker, alt, isWrapped=false}) => {
   const scrollContainerRef = useRef(null);
   const itemRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -157,11 +157,13 @@ const PosterSlider = ({ movies, galleryType, onClick, checkedList, alt, classNam
       className="inline-block flex-shrink-0"
       ref={index === 0 ? itemRef : null}
     >
-      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} xBoundary={xBoundary} onClick={onClick} checkedList={checkedList}/>
+      <Poster movie={movie} galleryType={galleryType} isMobile={isMobile} xBoundary={xBoundary} onClick={onClick} idChecker={idChecker}/>
     </li>
   ));
 
-  const baseStyle = "w-full py-12 touch-pan-x overflow-x-scroll scrollbar-hide";
+  const baseStyle = "flex list-none p-0 whitespace-nowrap";
+  const galleryClass = galleryType == 'continue' ? '' : 'gap-4'
+  const wrapCLass = isWrapped ? 'flex-wrap' : ''
 
   return (
     <div
@@ -170,21 +172,25 @@ const PosterSlider = ({ movies, galleryType, onClick, checkedList, alt, classNam
     >
       <div 
         ref={scrollContainerRef}
-        className={clsx(baseStyle, className)}
+        //className={clsx(baseStyle, className)}
+        className = "w-full py-12 touch-pan-x overflow-x-scroll scrollbar-hide"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         style={{ touchAction: 'pan-y' }}
       >
         { movies.length > 0 ?
-          <ul className={"flex list-none p-0 whitespace-nowrap" + (galleryType == 'continue' ? '' : ' gap-4')}>
+          <ul
+            //className={"flex list-none p-0 whitespace-nowrap" + (galleryType == 'continue' ? '' : ' gap-4')}
+            className={clsx(baseStyle, galleryClass, wrapCLass)}
+          >
             { posters }
           </ul> :
           <NoContent>{ alt }</NoContent>
         }
       </div>
 
-      { !isMobile && showScrollButtons && (
+      { !isWrapped && !isMobile && showScrollButtons && (
         <>
           <div className="absolute z-20 bottom-1/2 translate-y-1/2 left-0 -translate-x-1/2 transition-opacity duration-300">
             <ScrollLeftButton 

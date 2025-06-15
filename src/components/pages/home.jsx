@@ -1,6 +1,6 @@
 import HomeTemplate from "../templates/home-template"
 import { navData, menuData, genreData, helpData } from "../../utils/app/home-utils"
-import { movieHero, movieGalleries } from "../../utils/data/home-data"
+import { movieHero, movieGalleries } from "../../utils/data/home-page-data"
 
 function Home() {
   const header = { navData:navData, menuData:menuData }

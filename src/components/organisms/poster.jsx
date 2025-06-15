@@ -41,7 +41,7 @@ function Poster({
   isMobile=false,
   xBoundary,
   onClick,
-  checkedList,
+  idChecker,
 }) {
   const [isHovered, setIsHovered] = useState(false)
   const posterRef = useRef(null)
@@ -91,7 +91,7 @@ function Poster({
           className="absolute z-30 top-1/2"
           style={getHoverPosition()}
         >
-          <PosterHover movie={movie} onClick={onClick} checkedList={checkedList}/>
+          <PosterHover movie={movie} onClick={onClick} idChecker={idChecker}/>
         </div>
       }
     </div>

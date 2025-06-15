@@ -21,11 +21,3 @@ export const movieGalleries = [
         movies: newData,
     },
 ]
-
-export const myList = [
-    {
-        title: "Daftar Saya",
-        type: "listed",
-        movies: topData,
-    },
-]

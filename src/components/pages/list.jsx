@@ -1,5 +1,5 @@
 import { navData, menuData, genreData, helpData } from "../../utils/app/home-utils"
-import { myList } from "../../utils/data/home-data"
+import { myList } from "../../utils/data/list-page-data"
 import HomeTemplate from "../templates/home-template"
 
 function List() {
