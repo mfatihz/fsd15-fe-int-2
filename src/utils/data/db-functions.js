@@ -1,10 +1,13 @@
 import { moviesDB } from './movies-db'
 
-const getMovies = (indexes) => indexes.map(i => moviesDB.find(movie => movie.id === i)).filter(Boolean);
+export const getMovies = (indexes) => indexes.map(i => moviesDB.find(movie => movie.id === i)).filter(Boolean);
+
+
+
+
 
 const heroDB = [10];
 export const heroData = getMovies(heroDB);
-
 
 const continueDB = [
     25, 2, 6, 18, 26, 16,
@@ -13,7 +16,7 @@ const continueDB = [
 export const continueData = getMovies(continueDB);
 
 const topDB = [2, 25, 24, 26];
-export const topData = topDB.map(id => moviesDB.find(movie => movie.id === id)).filter(Boolean);
+export const topData = getMovies(topDB);
 
 const trendingDB = [
     0, 1, 2, 3, 4, 5,
@@ -26,3 +29,5 @@ const newDB = [
     18, 19, 20, 21, 22, 23,
 ];
 export const newData = getMovies(newDB);
+
+export const listData = topData

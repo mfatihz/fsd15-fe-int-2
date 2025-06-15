@@ -1,10 +1,9 @@
-import { heroData, continueData, topData, trendingData, newData } from "./db-functions"
+import { listData } from "./db-functions"
 
-export const myList = [
+export const myList = (movies) => [
     {
         title: "Daftar Saya",
-        type: "listed",
-        movies: topData,
+        movies: movies,//listData,
         isWrapped: true,
     },
 ]

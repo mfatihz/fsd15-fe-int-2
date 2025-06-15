@@ -57,8 +57,8 @@ import Gallery from "../organisms/gallery"
 import NoContent from "../atoms/no-content"
 import useLocalStorage from '../../hooks/use-local-storage';
 
-function GalleryTemplate({ galleries, padding }) {
-    const {ids, toggleId, hasId} = useLocalStorage('my-lists', new Set());
+function GalleryTemplate({ galleries, padding, mylistToggleHandler, isInMyListHandler }) {
+    //const {ids, toggleId: mylistToggleHandler, hasId} = useLocalStorage('my-lists', new Set());
 
     const baseStyle = `
         flex-1
@@ -79,8 +79,8 @@ function GalleryTemplate({ galleries, padding }) {
                                 title={gallery.title}
                                 movies={gallery.movies}
                                 galleryType={gallery.type}
-                                onClick={toggleId}
-                                idChecker={hasId}
+                                mylistToggleHandler={mylistToggleHandler}
+                                isInMyListHandler={isInMyListHandler}
                                 isWrapped={gallery.isWrapped}
                             />
                         </div>

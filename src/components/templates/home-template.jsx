@@ -3,7 +3,7 @@ import Hero from "../organisms/hero"
 import Footer from "../organisms/home-footer"
 import GalleryTemplate from "./gallery-template"
 
-function HomeTemplate({ header, footer, hero, galleries }) {
+function HomeTemplate({ header, footer, hero, galleries, mylistToggleHandler, isInMyListHandler }) {
     return (
         <div className="min-h-screen flex flex-col">
             <Header
@@ -33,6 +33,8 @@ function HomeTemplate({ header, footer, hero, galleries }) {
                     px-4 sm:px-10 md:px-20
                     py-4 sm:py-10 md:py-20
                 "
+                mylistToggleHandler={mylistToggleHandler}
+                isInMyListHandler={isInMyListHandler}
             />
             
             <Footer
