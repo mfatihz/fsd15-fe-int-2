@@ -21,7 +21,7 @@ function GalleryTemplate({ galleries, padding, idToggleHandler, isInMyListHandle
                             <Gallery
                                 title={gallery.title}
                                 movies={gallery.movies}
-                                galleryType={gallery.type}
+                                galleryType={gallery.galleryType}
                                 idToggleHandler={idToggleHandler}
                                 isInMyListHandler={isInMyListHandler}
                                 isWrapped={gallery.isWrapped}

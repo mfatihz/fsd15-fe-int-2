@@ -20,7 +20,7 @@ function List() {
 
     fetchMovies();
   }, [ids]);
-
+  
   return (
     <HomeTemplate
       header={header}

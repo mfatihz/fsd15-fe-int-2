@@ -5,7 +5,7 @@ export const movieHero = heroData
 export const movieGalleries = [
     {
         title: "Melanjutkan Tonton Film",
-        type: "continue",
+        galleryType: "continue",
         movies: continueData,
     },
     {
