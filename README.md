@@ -5,4 +5,4 @@ Vite + React + React Router + tailwind
 
 Demo:
 
-- [netlify](https://comfy-praline-f1ac44.netlify.app/)
+- [netlify](https://fsd15-fe-int2.netlify.app/)
