@@ -1,23 +1,23 @@
 const genres = (indexes) => indexes.map(i => ['action','drama','fantasy'][i])
 
-const movieTemplate = {//0
-    id: 0,
-    title: "",
-    type: ['movie','series'][0],
-    genres:['series','action','Sci-fi','drama','romance'],
-    badges: ['new','top'],
-    contentRating: "18+",
-    userRating: 4.7,
-    images: {
-        hero:'',
-        portrait:'/images/poster-portrait/aaa.svg',
-        landscape:'/images/poster-landscape/aaa.svg',
-    },
-    duration:'',
-    episodes: null,
-    myList: false,
-    summary: 'Belum ada ringkasan',
-}
+// const movieTemplate = {//0
+//     id: 0,
+//     title: "",
+//     type: ['movie','series'][0],
+//     genres:['series','action','Sci-fi','drama','romance'],
+//     badges: ['new','top'],
+//     contentRating: "18+",
+//     userRating: 4.7,
+//     images: {
+//         hero:'',
+//         portrait:'/images/poster-portrait/aaa.svg',
+//         landscape:'/images/poster-landscape/aaa.svg',
+//     },
+//     duration:'',
+//     episodes: null,
+//     myList: false,
+//     summary: 'Belum ada ringkasan',
+// }
 
 export const moviesDB = [
     {
@@ -35,7 +35,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {
@@ -43,7 +42,7 @@ export const moviesDB = [
         title: "Alice in Borderland",
         type: ['movie','series'][1],
         genres:genres([1,2]),
-        badges: ['new',],
+        badges: ['new'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -61,7 +60,7 @@ export const moviesDB = [
         title: "All of Us are Dead",
         type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: ['top'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -71,7 +70,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//3
@@ -89,7 +87,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//4
@@ -107,7 +104,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//5
@@ -115,7 +111,7 @@ export const moviesDB = [
         title: "Baymax",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: ['top'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -125,7 +121,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//6
@@ -143,7 +138,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//7
@@ -161,7 +155,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//8
@@ -169,7 +162,7 @@ export const moviesDB = [
         title: "Dilan",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -179,7 +172,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//9
@@ -197,7 +189,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//10
@@ -215,7 +206,6 @@ export const moviesDB = [
         },
         duration:'1.45',
         episodes: null,
-        myList: false,
         summary: `Sebuah benda tak dikenal mengambil alih dunia.
             Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara,
             termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.`,
@@ -225,7 +215,7 @@ export const moviesDB = [
         title: "Fast X",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -235,7 +225,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//12
@@ -243,7 +232,7 @@ export const moviesDB = [
         title: "Guardians of the Galaxy",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -253,7 +242,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//13
@@ -261,7 +249,7 @@ export const moviesDB = [
         title: "Happiness",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: ['new'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -271,7 +259,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//14
@@ -279,7 +266,7 @@ export const moviesDB = [
         title: "Jurassic World",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: ['top'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -289,7 +276,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//15
@@ -297,7 +283,7 @@ export const moviesDB = [
         title: "Megan",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -307,7 +293,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//16
@@ -315,7 +300,7 @@ export const moviesDB = [
         title: "The Little Mermaid",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: ['new'],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -325,7 +310,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//17
@@ -333,7 +317,7 @@ export const moviesDB = [
         title: "Missing",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -343,7 +327,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//18
@@ -361,7 +344,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//19
@@ -369,7 +351,7 @@ export const moviesDB = [
         title: "Quantumania",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -379,7 +361,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//20
@@ -387,7 +368,7 @@ export const moviesDB = [
         title: "Rio",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -397,7 +378,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//21
@@ -405,7 +385,7 @@ export const moviesDB = [
         title: "Shazam",
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
-        badges: ['new','top'],
+        badges: [],
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -415,7 +395,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//22
@@ -433,7 +412,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//23
@@ -451,7 +429,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//24
@@ -469,7 +446,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
     {//25
@@ -482,7 +458,6 @@ export const moviesDB = [
         userRating:4.7,
         duration:'1.45',
         episodes: null,
-        myList: false,
         images:{
             hero:'',
             portrait:'/images/poster-portrait/suzume.svg',
@@ -505,7 +480,6 @@ export const moviesDB = [
         },
         duration:'',
         episodes: null,
-        myList: false,
         summary: 'Belum ada ringkasan',
     },
 ]

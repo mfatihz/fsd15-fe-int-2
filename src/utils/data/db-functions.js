@@ -11,18 +11,18 @@ const continueDB = [
 ];
 export const continueData = getMovies(continueDB);
 
-const topDB = [2, 25, 24, 26];
+const topDB = [2, 25, 7, 24, 26];
 export const topData = getMovies(topDB);
 
 const trendingDB = [
-    0, 1, 2, 3, 4, 5,
-    6, 7, 8, 9, 10, 11,
+    7, 0, 1, 2, 25, 3, 4, 5, 24,
+    6, 7, 8, 26, 9, 10, 11, 14
 ];
 export const trendingData = getMovies(trendingDB);
 
 const newDB = [
-    12, 13, 14, 15, 16, 17,
-    18, 19, 20, 21, 22, 23,
+    12, 13, 8, 14, 15, 0, 16, 17,
+    18, 6, 19, 20, 21, 9, 22, 23,
 ];
 export const newData = getMovies(newDB);
 
