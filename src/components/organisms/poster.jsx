@@ -86,7 +86,8 @@ function Poster({
         className={ galleryType !== 'continue' ? 'cursor-pointer' : '' }
       />
 
-      { (!isMobile && isHovered && galleryType !== 'continue') && 
+      { //(!isMobile && isHovered && galleryType !== 'continue') &&
+        (isHovered && galleryType !== 'continue') && 
         <div 
           className="absolute z-30 top-1/2"
           style={getHoverPosition()}
