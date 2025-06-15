@@ -59,7 +59,6 @@ const PosterSlider = ({ movies, galleryType, mylistToggleHandler, isInMyListHand
     window.addEventListener('resize', checkIfMobile);
     window.addEventListener('resize', checkContentOverflow);
     
-
     return () => {
       resizeObserver.disconnect();
       window.removeEventListener('resize', checkIfMobile);
@@ -68,7 +67,7 @@ const PosterSlider = ({ movies, galleryType, mylistToggleHandler, isInMyListHand
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [movies.length]);
+  }, [movies.length, isDesktopTypeDevice]);
 
   const handleTouchStart = (e) => {
     const touch = e.touches[0];

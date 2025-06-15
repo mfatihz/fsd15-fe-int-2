@@ -1,0 +1,22 @@
+images: {
+    // note: Ketika Anda menggunakan URL langsung di CSS (termasuk inline style),
+    // Vite secara otomatis memproses path tersebut selama path-nya relatif terhadap file yang sedang diproses
+    // gambar diletakkan di folder src/assets/images/hero
+    hero:'duty-after-school.svg',
+    // note: gambar ditampilkan sebagai atribut pada <img>
+    // perlu metode khusus (seperti import atau new URL) untuk mendapatkan URL yang benar
+    // agar scrip lebih ringkas, gambar sementara ini diletakkan di public 
+    portrait:'/images/poster-portrait/suzume.svg',
+    landscape:'/images/poster-landscape/suzume.svg',
+},
+
+<div
+    className={clsx(baseStyle, className)}
+    
+    style={{
+        backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(${heroImage})`
+        // backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url(src/assets/images/hero/${imageUrl})` bisa direct seperti ini
+    }}
+>
+    { children }
+</div>

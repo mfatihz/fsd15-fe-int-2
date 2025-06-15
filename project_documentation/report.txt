@@ -1,0 +1,7 @@
+Implementasi useState:
+ pada footer:
+ - menampilkan chevron button hanya saat tampilan mobile, mekanismenya menggunakan useState: isMobile yang dikirim dari parent
+ - membuka tutup links pada Genre dan Bantuan
+ - mengubah representasi icon chevron (chevron-right dan chevron-down)
+
+ 
