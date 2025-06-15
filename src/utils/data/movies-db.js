@@ -1,31 +1,14 @@
 const genres = (indexes) => indexes.map(i => ['action','drama','fantasy'][i])
 
-// const movieTemplate = {//0
-//     id: 0,
-//     title: "",
-//     type: ['movie','series'][0],
-//     genres:['series','action','Sci-fi','drama','romance'],
-//     badges: ['new','top'],
-//     contentRating: "18+",
-//     userRating: 4.7,
-//     images: {
-//         hero:'',
-//         portrait:'/images/poster-portrait/aaa.svg',
-//         landscape:'/images/poster-landscape/aaa.svg',
-//     },
-//     duration:'',
-//     episodes: null,
-//     myList: false,
-//     summary: 'Belum ada ringkasan',
-// }
-
 export const moviesDB = [
     {
         id: 0,
         title: "My Hero Academia",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 11,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -33,8 +16,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/academia.svg',
             landscape:'/images/poster-landscape/academia.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {
@@ -43,6 +24,8 @@ export const moviesDB = [
         type: ['movie','series'][1],
         genres:genres([1,2]),
         badges: ['new'],
+        duration:'',
+        episodes: 7,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -50,9 +33,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/alice-border.svg',
             landscape:'/images/poster-landscape/alice-border.svg',
         },
-        duration:'',
-        episodes: null,
-        myList: true,
         summary: 'Belum ada ringkasan',
     },
     {//2
@@ -61,6 +41,8 @@ export const moviesDB = [
         type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['top'],
+        duration:'',
+        episodes: 13,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -68,8 +50,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/all-us-dead.svg',
             landscape:'/images/poster-landscape/all-us-dead.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//3
@@ -78,6 +58,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:genres([1,2]),
         badges: ['top'],
+        duration:'2.30',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -85,16 +67,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/avatar.svg',
             landscape:'/images/poster-landscape/avatar.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//4
         id: 4,
         title: "Batman",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 22,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -102,8 +84,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/batman.svg',
             landscape:'/images/poster-landscape/batman.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//5
@@ -112,6 +92,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['top'],
+        duration:'1.40',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -119,8 +101,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/baymax.svg',
             landscape:'/images/poster-landscape/baymax.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//6
@@ -129,6 +109,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'1.20',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -136,16 +118,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/big-hero-6.svg',
             landscape:'/images/poster-landscape/big-hero-6.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//7
         id: 7,
         title: "Blue Lock",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 30,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -153,8 +135,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/blue-lock.svg',
             landscape:'/images/poster-landscape/blue-lock.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//8
@@ -163,6 +143,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'2.12',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -170,16 +152,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/dilan.svg',
             landscape:'/images/poster-landscape/dilan.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//9
         id: 9,
         title: "Don't Look Up",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 15,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -187,16 +169,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/dont-look-up.svg',
             landscape:'/images/poster-landscape/dont-look-up.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//10
         id: 10,
         title: "Duty after School",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres: ['action','drama','fantasy'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 21,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -204,8 +186,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/duty-after-school.svg',
             landscape:'/images/poster-landscape/duty-after-school.svg',
         },
-        duration:'1.45',
-        episodes: null,
         summary: `Sebuah benda tak dikenal mengambil alih dunia.
             Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara,
             termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.`,
@@ -216,6 +196,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.09',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -223,8 +205,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/fast.svg',
             landscape:'/images/poster-landscape/fast.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//12
@@ -233,6 +213,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.23',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -240,8 +222,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/guardian-galaxy.svg',
             landscape:'/images/poster-landscape/guardian-galaxy.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//13
@@ -250,6 +230,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new'],
+        duration:'1.45',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -257,8 +239,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/happiness.svg',
             landscape:'/images/poster-landscape/happiness.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//14
@@ -267,6 +247,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['top'],
+        duration:'2.15',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -274,8 +256,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/jurassic.svg',
             landscape:'/images/poster-landscape/jurassic.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//15
@@ -284,6 +264,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.12',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -291,8 +273,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/megan.svg',
             landscape:'/images/poster-landscape/megan.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//16
@@ -301,6 +281,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new'],
+        duration:'1.32',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -308,8 +290,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/mermaid.svg',
             landscape:'/images/poster-landscape/mermaid.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//17
@@ -318,6 +298,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.11',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -325,16 +307,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/missing.svg',
             landscape:'/images/poster-landscape/missing.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//18
         id: 18,
         title: "A Man Called Otto",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 19,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -342,8 +324,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/otto.svg',
             landscape:'/images/poster-landscape/otto.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//19
@@ -352,6 +332,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.33',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -359,8 +341,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/quantumania.svg',
             landscape:'/images/poster-landscape/quantumania.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//20
@@ -369,6 +349,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'1.50',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -376,16 +358,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/rio.svg',
             landscape:'/images/poster-landscape/rio.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//21
         id: 21,
         title: "Shazam",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: [],
+        duration:'',
+        episodes: 18,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -393,8 +375,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/shazam.svg',
             landscape:'/images/poster-landscape/shazam.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//22
@@ -403,6 +383,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'1.42',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -410,16 +392,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/sonic-2.svg',
             landscape:'/images/poster-landscape/sonic-2.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//23
         id: 23,
         title: "Spiderman",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 17,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -427,16 +409,16 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/spiderman.svg',
             landscape:'/images/poster-landscape/spiderman.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//24
         id: 24,
         title: "The Little Stuart",
-        type: ['movie','series'][0],
+        type: ['movie','series'][1],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'',
+        episodes: 16,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -444,8 +426,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/stuart.svg',
             landscape:'/images/poster-landscape/stuart.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
     {//25
@@ -454,10 +434,10 @@ export const moviesDB = [
         type:['movie','series'][0],
         genres:genres([1,2]),
         badges:['new','top'],
-        contentRating:['18+','G','PG','R'][2],
-        userRating:4.7,
         duration:'1.45',
         episodes: null,
+        contentRating:['18+','G','PG','R'][2],
+        userRating:4.7,
         images:{
             hero:'',
             portrait:'/images/poster-portrait/suzume.svg',
@@ -471,6 +451,8 @@ export const moviesDB = [
         type: ['movie','series'][0],
         genres:['series','action','Sci-fi','drama','romance'],
         badges: ['new','top'],
+        duration:'1.56',
+        episodes: null,
         contentRating: "18+",
         userRating: 4.7,
         images: {
@@ -478,8 +460,6 @@ export const moviesDB = [
             portrait:'/images/poster-portrait/tom-war.svg',
             landscape:'/images/poster-landscape/tom-war.svg',
         },
-        duration:'',
-        episodes: null,
         summary: 'Belum ada ringkasan',
     },
 ]
