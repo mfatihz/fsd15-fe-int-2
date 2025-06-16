@@ -1,7 +1,7 @@
 import Header from "../organisms/home-header"
 import Hero from "../organisms/hero"
 import Footer from "../organisms/home-footer"
-import GalleryTemplate from "./gallery-template"
+import GalleriesTemplate from "./galleries-template"
 
 function HomeTemplate({ header, footer, hero, galleries, idToggleHandler, isInMyListHandler }) {
     return (
@@ -26,7 +26,7 @@ function HomeTemplate({ header, footer, hero, galleries, idToggleHandler, isInMy
                 />
             }
 
-            <GalleryTemplate
+            <GalleriesTemplate
                 galleries={galleries}
                 padding="
                     px-4 sm:px-10 md:px-20

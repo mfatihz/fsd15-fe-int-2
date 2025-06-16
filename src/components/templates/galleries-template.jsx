@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import Gallery from "../organisms/gallery"
 import NoContent from "../atoms/no-content"
 
-function GalleryTemplate({ galleries, padding, idToggleHandler, isInMyListHandler }) {
+function GalleriesTemplate({ galleries, padding, idToggleHandler, isInMyListHandler }) {
     const baseStyle = `
         flex-1
         flex flex-col
@@ -12,7 +12,6 @@ function GalleryTemplate({ galleries, padding, idToggleHandler, isInMyListHandle
     return (
         <main
             className={clsx(baseStyle, padding)}
-            //bg-[#181A1C]
         >
             { galleries?.length > 0
                 ? galleries?.map(
@@ -29,10 +28,10 @@ function GalleryTemplate({ galleries, padding, idToggleHandler, isInMyListHandle
                         </div>
                     )
                 )
-                : <NoContent color="text-yellow-500">Belum ada isi</NoContent>
+                : <NoContent color="text-yellow-500">Galeri belum tersedia</NoContent>
             }
         </main>
     )
 }
 
-export default GalleryTemplate
+export default GalleriesTemplate

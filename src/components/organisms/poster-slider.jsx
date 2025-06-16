@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import NoContent from '../atoms/no-content';
 import { getDeviceType } from '../../utils/get-device-type';
 
-const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler, alt, isWrapped=false}) => {
+const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler, alt="Isi galeri belum tersedia", isWrapped=false}) => {
   const scrollContainerRef = useRef(null);
   const itemRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -40,7 +40,7 @@ const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler,
         const container = scrollContainerRef.current;
         const itemWidth = itemRef.current.offsetWidth;
         const gap = 16; // space-x-4 = 16px
-        const totalContentWidth = movies.length * (itemWidth + gap) - gap;
+        const totalContentWidth = movies?.length * (itemWidth + gap) - gap;
         
         setShowScrollButtons(totalContentWidth > container.offsetWidth);
       }
@@ -68,7 +68,7 @@ const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler,
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [movies.length, isDesktopTypeDevice]);
+  }, [movies?.length, isDesktopTypeDevice]);
 
   const handleTouchStart = (e) => {
     const touch = e.touches[0];
@@ -151,7 +151,7 @@ const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler,
     return () => window.removeEventListener('resize', updatePosition);
   }, []);
 
-  const posters = movies.map((movie, index) => (
+  const posters = movies?.map((movie, index) => (
     <li
       key={movie.id}
       className="inline-block flex-shrink-0"
@@ -183,7 +183,7 @@ const PosterSlider = ({ movies, galleryType, idToggleHandler, isInMyListHandler,
         onTouchEnd={handleTouchEnd}
         style={{ touchAction: 'pan-y' }}
       >
-        { movies.length > 0 ?
+        { movies?.length > 0 ?
           <ul
             className={clsx(baseStyle, galleryClass, wrapCLass)}
           >
