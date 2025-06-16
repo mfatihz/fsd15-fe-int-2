@@ -1,9 +1,7 @@
 import clsx from 'clsx'
 import FooterGroup from "./footer-group";
-import ChillLogoFull from "../atoms/chill-logo-full";
-import Copyright from "../atoms/copyright";
 import FooterLinks from '../molecules/footer-links';
-import FooterLogoSection from '../molecules/footer-logo';
+import FooterLogoSection from '../molecules/footer-logo-section';
 
 const HomeFooter = ({ genreData, helpData, className }) => {
   const baseStyle = `
