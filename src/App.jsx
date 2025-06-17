@@ -13,7 +13,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/lists" element={<List />} />
-        {/* Navlinks */}
+        {/* Header Links */}
         <Route path="/series" element={<UnderDevelopment tag="Series" />} />
         <Route path="/movies" element={<UnderDevelopment tag="Movies" />} />
         {/* Menu */}
@@ -21,9 +21,9 @@ function App() {
         <Route path="/premium" element={<UnderDevelopment tag="Premium" />} />
         {/* Auth */}
         <Route path="/forgot-password" element={<UnderDevelopment to="/login" tag="Login">Kembali ke Login</UnderDevelopment>} />
-        {/* Genre */}
+        <Route path="/oauth" element={<UnderDevelopment to="/login" tag="Login">Kembali ke Login</UnderDevelopment>} />
+        {/* Footer */}
         <Route path="/genre/:genreId" element={<UnderDevelopment tag="Genre" />} />
-        {/* Bantuan */}
         <Route path="/help/:helpId" element={<UnderDevelopment tag="Help" />} />
         {/* Catch-all route untuk path lain di footer */}
         <Route path="*" element={<UnderDevelopment />} />
