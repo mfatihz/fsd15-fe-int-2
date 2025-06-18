@@ -23,26 +23,28 @@ function HomeTemplate({ header, footer, hero, galleries, idToggleHandler, isInMy
                 ref={ topRef }
             />
 
-            { hero &&
-                <Hero
-                    movies={hero}
+            <main>
+                { hero &&
+                    <Hero
+                        movies={hero}
+                        padding="
+                            px-4 sm:px-10 md:px-20
+                            pb-4 sm:pb-10 md:pb-20
+                        "
+                    />
+                }
+
+                <GalleriesTemplate
+                    galleries={galleries}
                     padding="
                         px-4 sm:px-10 md:px-20
-                        pb-4 sm:pb-10 md:pb-20
+                        py-4 sm:py-10 md:py-20
                     "
+                    idToggleHandler={idToggleHandler}
+                    isInMyListHandler={isInMyListHandler}
                 />
-            }
+            </main>
 
-            <GalleriesTemplate
-                galleries={galleries}
-                padding="
-                    px-4 sm:px-10 md:px-20
-                    py-4 sm:py-10 md:py-20
-                "
-                idToggleHandler={idToggleHandler}
-                isInMyListHandler={isInMyListHandler}
-            />
-            
             <Footer
                 genreData={footer.genreData}
                 helpData={footer.helpData}

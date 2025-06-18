@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import logo from '../../assets/images/icons/chill-logo.svg';
 import logoSmall from '../../assets/images/icons/chill-logo-small.svg';
+import { Link } from "react-router";
 
 const ChillLogo = ({className=''}) => {
   const baseStyle = `
@@ -11,16 +12,19 @@ const ChillLogo = ({className=''}) => {
   `
   
   return (
-    <picture>
-      <source media="(min-width: 640px)" srcSet={logo} />
-      <source media="(max-width: 639px)" srcSet={logoSmall} />
-      <img
-        src={logo}
-        alt="Chill logo"
-        loading="lazy"
-        className={clsx(baseStyle, className)}
-      />
-    </picture>
+    <Link to="/">
+      <picture>
+        <source media="(min-width: 640px)" srcSet={logo} />
+        <source media="(max-width: 639px)" srcSet={logoSmall} />
+        <img
+          src={logo}
+          alt="Chill logo"
+          loading="lazy"
+          className={clsx(baseStyle, className)}
+        />
+      </picture>
+    </Link>
+    
   );
 };
 

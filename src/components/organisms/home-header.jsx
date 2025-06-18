@@ -30,7 +30,7 @@ const HomeHeader = forwardRef(({ navData, menuData, padding }, ref) => {
 
   return (
     <header className={clsx(baseStyle, padding)} ref={ref}>
-      <ChillLogo className="hover:animate-bounce duration-700" />
+      <ChillLogo className="hover:scale-105" />
       <NavigationalLinks links={navData} />
       <SettingMenu links={menuData} className="ml-auto" />
     </header>
