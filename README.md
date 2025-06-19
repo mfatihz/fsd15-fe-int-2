@@ -1,6 +1,7 @@
 # CHILL App
 
-CHILL app dibangun dari React component dengan paradigma atomic design
+CHILL app dibangun dari React component dengan paradigma atomic design\
+
 Stack: Vite + React + React Router + tailwind\
 Demo: [netlify](https://fsd15-fe-int2.netlify.app/)
 
@@ -22,7 +23,7 @@ Data yang dipakai diletakkan pada **home-utils.jsx** pada folder **src/utils/app
 ### Galleries
 
 Tampilan **Galleries** template dibuat secara dinamis berdasarkan list object **Gallery** (disimpan pada **home-page-data.js** dan **list-page-data.js** pada folder **src/utils/data/**).\
-Jika data **Galleries** tidak kosong, list tersebut akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data
+Jika data **Galleries** tidak kosong, list **Gallery** akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data.
 
 ### Gallery
 
