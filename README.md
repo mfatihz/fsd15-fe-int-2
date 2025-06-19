@@ -28,7 +28,7 @@ Jika data **Galleries** tidak kosong, list **Gallery** akan terender pada page. 
 ### Gallery
 
 Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
-seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.\
+seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.  
 
 Struktur data yang dipakai pada **Gallery**:
 ```
