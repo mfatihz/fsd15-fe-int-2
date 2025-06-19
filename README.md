@@ -1,34 +1,30 @@
 # CHILL App
 
+CHILL app dibangun dari React component dengan paradigma atomic design
 Stack: Vite + React + React Router + tailwind\
 Demo: [netlify](https://fsd15-fe-int2.netlify.app/)
 
-## Highlight
-
-CHILL app dibangun dari React component dengan paradigma atomic design.
-
-
-### Login dan Register
+## Login dan Register
 
 **Login** page dan **Register** page menggunakan **AuthTemplate**.\
 AuthTemplate tersusun **AuthHeader** molecule, dengan props untuk mengatur nilai di dalamnya, serta Form organims (**LoginForm** dan **RegisterForm**).
 
-### Home dan List
+## Home dan List
 
 **Home** page dan **List** page dibentuk dengan menggunakan **HomeTemplate**
 yang tersusun atas: **Header** organism, **Hero** organism dan **Galleries** template, dan **Footer** organism.
 
-#### Header
+### Header
 
 Header memiliki elemen yang dibuat secara dinamis berdasar data yaitu link navigasi (**NavigationalLinks** molecule) dan menu item pada avatar (**SettingMenu** organism).\
 Data yang dipakai diletakkan pada **home-utils.jsx** pada folder **src/utils/app**.
 
-#### Galleries
+### Galleries
 
 Tampilan **Galleries** template dibuat secara dinamis berdasarkan list object **Gallery** (disimpan pada **home-page-data.js** dan **list-page-data.js** pada folder **src/utils/data/**).\
 Jika data **Galleries** tidak kosong, list tersebut akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data
 
-#### Gallery
+### Gallery
 
 Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
 seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.\
@@ -42,7 +38,7 @@ Struktur data yang dipakai pada **Gallery**:
 },
 ```
 
-#### movie Object
+### movie Object
 
 Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** object memiliki struktur data seperti berikut ini:
 ```
