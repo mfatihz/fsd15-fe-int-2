@@ -25,6 +25,31 @@ Data yang dipakai diletakkan pada **home-utils.jsx** pada folder **src/utils/app
 Tampilan **Galleries** template dibuat secara dinamis berdasarkan list object **Gallery** (disimpan pada **home-page-data.js** dan **list-page-data.js** pada folder **src/utils/data/**).\
 Jika data **Galleries** tidak kosong, list **Gallery** akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data.
 
+Contoh data **Galleries**:
+```
+[
+    {
+        title: "Melanjutkan Tonton Film",
+        galleryType: "continue",
+        movies: continueData,
+    },
+    {
+        title: "Top Rating Film dan Series Hari ini",
+        movies: topData,
+    },
+    {
+        title: "Film Trending",
+        movies: trendingData,
+    },
+    {
+        title: "Rilis Baru",
+        movies: newData,
+    },
+]
+```
+
+Penambahan atau pengurangan data **gallery** pada **Galleries** object di atas akan secara otomatis terefleksikan di dalam tampilan halaman.
+
 ### Gallery
 
 Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
@@ -36,14 +61,14 @@ Struktur data yang dipakai pada **Gallery**:
         title, \\ title untuk gallery
         galleryType, \\ bisa dikosongkan (default) atau diisi 'continue'
         movies, \\ list movie object
-},
+}
 ```
 
 ### movie Object
 
 Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** object memiliki struktur data seperti berikut ini:
 ```
- {
+{
         id, // id unik movies. Harus diisi
         title, // judul movie/series
         type: // salah satu di antara: movies atau series. Harus diisi
@@ -59,6 +84,6 @@ Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** obje
             landscape:'/images/poster-landscape/<nama-landscape-img>',
         },
         summary, // teks yang muncul di deskripsi Hero image (atau di bagian lainnya yang membutuhkan deskripsi movie/series)
-    }
+}
 ```
 
