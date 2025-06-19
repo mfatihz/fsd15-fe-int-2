@@ -1,9 +1,6 @@
 # React + Vite
 
-Stack:\
-Vite + React + React Router + tailwind\
-
-
+Stack: Vite + React + React Router + tailwind\
 Demo: [netlify](https://fsd15-fe-int2.netlify.app/)
 
 ## Highlight:
@@ -32,12 +29,21 @@ Jika data **Galleries** tidak kosong, list tersebut akan terender pada page. Sed
 
 ### Gallery
 
-Object data **Gallery** berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
-seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.
+Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
+seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.\
 
-### Movie
+Struktur data yang dipakai:
+```
+{
+        title, \\ title untuk gallery
+        galleryType, \\ bisa dikosongkan (default) atau diisi 'continue'
+        movies, \\ list movie object
+},
+```
 
-Data **movie** object merupakan unsur utama penyusun **gallery**. **Movie** memiliki struktur data seperti berikut ini:
+### movie
+
+Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** object memiliki struktur data seperti berikut ini:
 ```
  {
         id, // id unik movies. Harus diisi
