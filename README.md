@@ -1,11 +1,12 @@
-# React + Vite
+# CHILL App
 
 Stack: Vite + React + React Router + tailwind\
 Demo: [netlify](https://fsd15-fe-int2.netlify.app/)
 
-## Highlight:
+## Highlight
 
-Components disusun dengan menggunakan paradigma atomic design.
+CHILL app dibangun dari React component dengan paradigma atomic design.
+
 
 ### Login dan Register
 
