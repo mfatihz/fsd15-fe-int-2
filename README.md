@@ -22,8 +22,8 @@ Data yang dipakai diletakkan pada **home-utils.jsx** pada folder **src/utils/app
 
 ### Galleries
 
-Tampilan **Galleries** template dibuat secara dinamis berdasarkan list object **Gallery** (disimpan pada **home-page-data.js** dan **list-page-data.js** pada folder **src/utils/data/**).\
-Jika data **Galleries** tidak kosong, list **Gallery** akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data.
+Tampilan **Galleries** template dibuat secara dinamis berdasarkan array object **Gallery** (disimpan pada **home-page-data.js** dan **list-page-data.js** pada folder **src/utils/data/**).\
+Jika data **Galleries** tidak kosong, array **Gallery** akan terender pada page. Sedangkan jika data **Galleries** kosong, teks alternatif akan ditampilkan untuk menandai bahwa tidak ada data.
 
 Contoh data **Galleries**:
 ```
@@ -52,7 +52,7 @@ Penambahan atau pengurangan data **gallery** pada **Galleries** object di atas a
 
 ### Gallery
 
-Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan list object **Movie**.\
+Data **Gallery** object berisi data **title** (misalnya: "Rilis Baru") dan array object **Movie**.\
 seperti halnya pada **Galleries** Jika data **Movie** kosong, teks alternatif akan ditampilkan untuk menandai bahwa isi gallery masih kosong.  
 
 Struktur data yang dipakai pada **Gallery**:
@@ -60,7 +60,7 @@ Struktur data yang dipakai pada **Gallery**:
 {
         title, \\ title untuk gallery
         galleryType, \\ bisa dikosongkan (default) atau diisi 'continue'
-        movies, \\ list movie object
+        movies, \\ array movie object
 }
 ```
 
@@ -73,7 +73,7 @@ Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** obje
         title, // judul movie/series
         type: // salah satu di antara: movies atau series. Harus diisi
         genres: // genre dari movies/series misalnya 'aksi, 'anime' atau 'drama'
-        badges, // berupa list atau null. List bisa menggunakan nilai: 'new' atau 'top'.
+        badges, // berupa array atau null. List bisa menggunakan nilai: 'new' atau 'top'.
         duration, // durasi movies
         episodes, // jumlah episode dalam series
         contentRating, // kategori rating movie atau series (mis: 'G' atau 'R')
