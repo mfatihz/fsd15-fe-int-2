@@ -78,7 +78,7 @@ Data **movie** object merupakan unsur utama penyusun **gallery**. **movie** obje
         episodes, // jumlah episode dalam series
         contentRating, // kategori rating movie atau series (mis: 'G' atau 'R')
         userRating, // nilai rating dari pengguna. Skala 0-5
-        images: { // berisi url gambar
+        images: { // berisi url gambar pada folder **public**
             hero:'/images/hero/<nama-hero-img>',
             portrait:'/images/poster-portrait/<nama-portrait-img>',
             landscape:'/images/poster-landscape/<nama-landscape-img>',
