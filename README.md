@@ -66,8 +66,7 @@ Struktur data yang dipakai pada **Gallery**:
 
 ### movie Object
 
-Data **movie** JSON object merupakan unsur utama penyusun **gallery**.\
-**movie** JSONobject memiliki struktur data seperti berikut ini:
+Data **movie** JSON object merupakan unsur utama penyusun **gallery**. **movie** JSON object memiliki struktur data seperti berikut ini:
 ```
 {
         id, // id unik movies. Harus diisi
