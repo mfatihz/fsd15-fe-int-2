@@ -95,7 +95,7 @@ Pada tahap ini, sisi interaktif app ditingkatkan lebih lanjut dengan penggunaan 
 useState digunakan untuk mengupdate tampilan. Contoh utamanya:
 - Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar.
 - Halaman Daftar Saya: useState dipakai untuk mengetahui list movies.
-- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk mengetahui batas tepi parent. Jika Poster berada di tepi parent, PosterHover digeser sedemikian rupa agar tampilannya tidak terpotong (kecuali pada Poster di posisi kiri yang bukan urutan pertama).
+- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk mengetahui batas tepi parent kemudian data tersebut dipergunakan swdemikian rupa untuk penempatan PosterHover.
 
 ### Penggunaan array
 
