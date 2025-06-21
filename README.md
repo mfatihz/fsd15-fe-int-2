@@ -86,4 +86,19 @@ Data **movie** JSON object merupakan unsur utama penyusun **gallery**. **movie**
         summary, // teks yang muncul di deskripsi Hero image (atau di bagian lainnya yang membutuhkan deskripsi movie/series)
 }
 ```
+## Poin Pengembangan App
 
+Pada tahap ini, sisi interaktif app ditingkatkan lebih lanjut dengan penggunaan useState dan data array.
+
+### useState
+
+useState digunakan untuk mengupdate tampilan. Contoh utamanya:
+- Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar.
+- Halaman Daftar Saya: useState dipakai untuk mengetahui list movies.
+- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk menentukan posisi dari PosterHover. Jika Poster berada di pinggir, PosterHover digeser sedemikian rupa agar tampilannya tidak terpotong (kecuali pada Poster di posisi kiri yang bukan urutan pertama)
+
+### Penggunaan array
+
+Array telah digunakan di beberapa tempat, misalnya:
+- Pada halaman Home: array digunakan untuk meng-generate tampilan galleries. Gallery sendiri juga merupakan array yang isinya adalah array dari object movie. Saat ini, array pada galleries masih bersifat statis, diletakkan dalam folder src\utils\data\. Perubahan pada data galleries dan gallery atakan secara otomatis tercermin di tampilan App.
+- Pada Halaman DaftarSaya: array digunakan untuk menampilkan daftar movie, menambah, dan menghapus daftar movie. Data array di bagian ini bersifat dinamis, user bisa menambah atau mengurangi data dengan mengklik tombol 'Check' pada PosterHover. Data array ini juga telah disimpan di localStorage. 
