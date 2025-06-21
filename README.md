@@ -83,7 +83,7 @@ Data **movie** JSON object merupakan unsur utama penyusun **gallery**. **movie**
             portrait:'/images/poster-portrait/<nama-portrait-img>',
             landscape:'/images/poster-landscape/<nama-landscape-img>',
         },
-        summary, // teks yang muncul di deskripsi Hero image (atau di bagian lainnya yang membutuhkan deskripsi movie/series)
+        summary, // untuk deskripsi di Hero image (atau di bagian lainnya, jika dibutuhkan)
 }
 ```
 ## Poin Pengembangan App
@@ -95,7 +95,7 @@ Pada tahap ini, sisi interaktif app ditingkatkan lebih lanjut dengan penggunaan 
 useState digunakan untuk mengupdate tampilan. Contoh utamanya:
 - Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar.
 - Halaman Daftar Saya: useState dipakai untuk mengetahui list movies.
-- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk menentukan posisi dari PosterHover. Jika Poster berada di pinggir, PosterHover digeser sedemikian rupa agar tampilannya tidak terpotong (kecuali pada Poster di posisi kiri yang bukan urutan pertama)
+- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk menentukan posisi dari PosterHover. Jika Poster berada di pinggir, PosterHover digeser sedemikian rupa agar tampilannya tidak terpotong (kecuali pada Poster di posisi kiri yang bukan urutan pertama).
 
 ### Penggunaan array
 
