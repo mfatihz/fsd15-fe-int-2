@@ -95,10 +95,10 @@ Pada tahap ini, sisi interaktif app ditingkatkan lebih lanjut dengan penggunaan 
 useState digunakan untuk mengupdate tampilan. Contoh utamanya:
 - Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar.
 - Halaman Daftar Saya: useState dipakai untuk mengetahui list movies.
-- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk mengetahui batas tepi parent kemudian data tersebut dipergunakan swdemikian rupa untuk penempatan PosterHover.
+- Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk mengetahui batas tepi parent. Data batas ini kemudian dipergunakan sedemikian rupa untuk penempatan PosterHover.
 
 ### Penggunaan array
 
 Array telah digunakan di beberapa tempat, misalnya:
-- Pada halaman Home: array digunakan untuk meng-generate tampilan galleries. Gallery sendiri juga merupakan array yang isinya adalah array dari object movie. Saat ini, array pada galleries masih bersifat statis, diletakkan dalam folder src\utils\data\. Perubahan pada data galleries dan gallery atakan secara otomatis tercermin di tampilan App.
-- Pada Halaman DaftarSaya: array digunakan untuk menampilkan daftar movie, menambah, dan menghapus daftar movie. Data array di bagian ini bersifat dinamis, user bisa menambah atau mengurangi data dengan mengklik tombol 'Check' pada PosterHover. Data array ini juga telah disimpan di localStorage. 
+- Pada halaman Home: array digunakan untuk meng-generate tampilan galleries. Gallery sendiri juga merupakan array yang isinya adalah array dari object movie. Saat ini, array pada galleries masih bersifat statis, diletakkan dalam folder src\utils\data\. Perubahan pada data galleries dan gallery akan secara otomatis tercermin di tampilan app.
+- Pada Halaman Daftar Saya: array digunakan untuk menampilkan daftar movie, menambah, dan menghapus daftar movie. Data array di bagian ini bersifat dinamis, user bisa menambah atau mengurangi data dengan mengklik tombol 'Check' pada PosterHover. Data array ini juga telah disimpan di localStorage. 
