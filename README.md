@@ -93,12 +93,12 @@ Pada tahap ini, sisi interaktif app ditingkatkan lebih lanjut dengan penggunaan 
 ### useState
 
 useState digunakan untuk mengupdate tampilan. Contoh utamanya:
-- Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar.
-- Halaman Daftar Saya: useState dipakai untuk mengetahui list movies.
+- Halaman Home: useState dipakai untuk menentukan buka tutupnya menu avatar pada Header. useState dipergunakan juga pada Footer untuk menentukan tampil tidaknya tombol Chevron dan tipe tombol Chevron yang akan ditampilkan.
+- Halaman Daftar Saya: useState dipakai untuk mengetahui list movies yang akan ditampilkan di Galleries.
 - Poster (organims): Poster card menggunakan useState untuk menentukan status hover mouse. Selain itu, Poster juga menerima props dari parent container-nya untuk mengetahui batas tepi parent. Data batas ini kemudian dipergunakan sedemikian rupa untuk penempatan PosterHover.
 
 ### Penggunaan array
 
-Array telah digunakan di beberapa tempat, misalnya:
-- Pada halaman Home: array digunakan untuk meng-generate tampilan galleries. Gallery sendiri juga merupakan array yang isinya adalah array dari object movie. Saat ini, array pada galleries masih bersifat statis, diletakkan dalam folder src\utils\data\. Perubahan pada data galleries dan gallery akan secara otomatis tercermin di tampilan app.
-- Pada Halaman Daftar Saya: array digunakan untuk menampilkan daftar movie, menambah, dan menghapus daftar movie. Data array di bagian ini bersifat dinamis, user bisa menambah atau mengurangi data dengan mengklik tombol 'Check' pada PosterHover. Data array ini juga telah disimpan di localStorage. 
+Pada tahap ini, array telah dipergunakan di beberapa bagian aplikasi, misalnya untuk mengkustomasi link di bagian header atau untuk meng-generate kelompok gallery dan Poster card pada bagian galleries.
+- Pada halaman Home: array galleries digunakan untuk meng-generate tampilan Galleries dan perubahan pada data tersebut akan secara otomatis tercermin di tampilan app. Untuk tahap ini, data amasih statis dan disimpan pada folder src\utils\data\.
+- Pada Halaman Daftar Saya: data set id digunakan untuk menampilkan daftar movie, menambah, dan menghapus daftar movie. Data ini bersifat dinamis, dengan nilai awal kosong. User kemudian bisa menambah atau mengurangi data dengan mengklik tombol 'Check' pada PosterHover. Sebagai catatan, struktur data yang dipakai di sini adalah varian dari tipe data array yaitu tipe data set karena data yang disimpan adalah data unik.
