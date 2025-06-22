@@ -71,19 +71,19 @@ Data **movie** JSON object merupakan unsur utama penyusun **gallery**. **movie**
 {
         id, // id unik movies. Harus diisi
         title, // judul movie/series
-        type: // salah satu di antara: movies atau series. Harus diisi
-        genres: // genre dari movies/series misalnya 'aksi, 'anime' atau 'drama'
-        badges, // berupa array atau null. List bisa menggunakan nilai: 'new' atau 'top'.
+        type: // salah satu di antara: 'movies' atau 'series'.
+        genres: // array genre dari movies/series misalnya 'aksi, 'anime' atau 'drama'
+        badges, // berupa array atau null. Dapat menggunakan nilai: 'new' atau 'top'.
         duration, // durasi movies
         episodes, // jumlah episode dalam series
         contentRating, // kategori rating movie atau series (mis: 'G' atau 'R')
         userRating, // nilai rating dari pengguna. Skala 0-5
-        images: { // berisi url gambar pada folder public
+        images: { // url gambar, pada folder public
             hero:'/images/hero/<nama-hero-img>',
             portrait:'/images/poster-portrait/<nama-portrait-img>',
             landscape:'/images/poster-landscape/<nama-landscape-img>',
         },
-        summary, // untuk deskripsi di Hero image (atau di bagian lainnya, jika dibutuhkan)
+        summary, // deskripsi (dipakai di Hero image atau di bagian lainnya, jika dibutuhkan)
 }
 ```
 ## Poin Pengembangan App
